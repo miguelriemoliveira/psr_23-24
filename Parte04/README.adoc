@@ -20,7 +20,7 @@ Deve desenvolver um programa similar a um https://www.typingtest.com/[typing tes
 
 Em resumo, o programa deve mostrar ao utilizador letras geradas de forma aleatória, ficando depois à espera que o utilizador insira a letra indicada. Quando o utilizador insere uma letra, o programa passa para a letra seguinte até que o desafio atinja uma tempo máximo predefinido.
 
-Veja este vídeo exemplificativo do https://youtu.be/6tRTOd5vPH8[programa em execução]
+Veja este vídeo exemplificativo do https://youtu.be/6tRTOd5vPH8[programa em execução]. Atenção que o vídeo não mostra a funcionalidade das palavras (ver abaixo).
 
 Detalhadamente, as funcionalidades a desenvolver são as seguintes:
 

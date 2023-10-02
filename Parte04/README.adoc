@@ -22,11 +22,11 @@ Em resumo, o programa deve mostrar ao utilizador letras geradas de forma aleató
 
 Veja este vídeo exemplificativo do https://youtu.be/6tRTOd5vPH8[programa em execução]
 
-Dealhadamente, as funcionalidades a desenvolver são as seguintes:
+Detalhadamente, as funcionalidades a desenvolver são as seguintes:
 
 1. criar um ficheiro main.py com a estrutura habitual
 
-2. o programa deve receber dois argumentos de entrada que definem o modo de finalização do teste (tempo máximo ou número de inputs máximo).
+2. o programa deve receber três argumentos de entrada que definem o modo de finalização do teste (tempo máximo, número de inputs máximo, e modo de caracter único ou de palavra).
 
 
 ========================================================
@@ -44,12 +44,16 @@ optional arguments:
 
   -mv MAX_VALUE, --max_value MAX_VALUE
                         Max number of seconds for time mode or maximum number of inputs for number of inputs mode.
+
+  -uw, --use_words    
+                        Use word typing mode, instead of single character typing.
+
 --------------------------------------------------------
 ========================================================
 
 [start=3]
 . o programa deve pedir ao utilizador que pressione uma tecla para começar o desafio
-. Depois de iniciado o desafio, o programa mostra uma letra minúscula (gerada aleatoreamente) ao utilizador e aguarda o input do utilizador (um caracter apenas, sem o utilizador ter de pressionar o enter)
+. Depois de iniciado o desafio, o programa mostra uma letra minúscula ou uma palavra(gerada aleatoriamente) ao utilizador e aguarda o input do utilizador (um caracter apenas, sem o utilizador ter de pressionar o enter, ou no modo de palavra o número de caracteres da palavra mostrada)
 . o funcionamento do teste deverá ter dois modos distintos: tempo máximo ou número de inputs máximo. O teste deve continuar até que seja ativada uma das seguintes condições de paragem:
     .. No modo de tempo máximo, quando o tempo de teste decorrido for maior do que o tempo máximo definido
     .. No modo de número de inputs máximo, quando o número de inputs dado pelo utilizador atingir o máximo predefinido
@@ -79,7 +83,9 @@ Defina um _namedtuple_ chamado _Input_ que contenha os três campos acima enumer
 | type_miss_average_duration | duração média das respostas incorretas do utilizador
 |===================================================
 
-Deve criar um dicionário python com todos estes campos, mais um campo adicional que é uma lista namedtuples do _Input_ (ver acima). Um exemplo do dicionario criado:
+Deve criar um dicionário python com todos estes campos, mais um campo adicional que é uma lista namedtuples do _Input_ 
+
+Um exemplo do dicionario criado (terá de ser adaptado para o caso das palavras):
 
 [source,Bash]
 --------------------------------------------------------

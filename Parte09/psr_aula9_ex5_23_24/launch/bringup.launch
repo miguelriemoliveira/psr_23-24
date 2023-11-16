@@ -1,0 +1,8 @@
+<launch>
+
+    <node pkg="psr_aula9_ex5_23_24" type="publisher.py"  name="PublisherA" output='screen'>
+        <remap from="topic" to="dog1"/>
+        <param name="frequency" type="double" value="1.0"/>
+    </node>
+
+</launch>

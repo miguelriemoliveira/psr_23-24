@@ -1,0 +1,18 @@
+<launch>
+
+
+    <node pkg="psr_aula9_ex5_23_24" type="subscriber.py" name="SubscriberAB1" output="screen">
+        <remap from='topic' to='dog1' />
+    </node>
+
+    <node pkg="psr_aula9_ex5_23_24" type="subscriber.py" name="SubscriberAB2" output="screen">
+        <remap from='topic' to='dog1' />
+    </node>
+
+    <node pkg="psr_aula9_ex5_23_24" type="subscriber.py" name="SubscriberC" output="screen">
+        <remap from='topic' to='dog2' />
+    </node>
+
+    <node pkg="rqt_graph" type="rqt_graph" name="rqt" output="screen" />
+
+</launch>

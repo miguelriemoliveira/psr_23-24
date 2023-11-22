@@ -220,6 +220,14 @@ Exercício 4 - Launch file PR2 bagfile
 -------------------------------------
 Escreva um launch file para lançar o playback do bagfile do PR2 e o RViz devidamente configurado.
 
+Descarregue também o repositório [pr2_common](https://github.com/PR2/pr2_common) para dentro do seu catkin workspace.
+
+Depois lance uma descrição do robô com o comando
+
+    roslaunch pr2_description upload_pr2.launch
+
+Finalmente, pode visualizar o robô em rviz adicionando o marker robot model.
+
 
 Exercício 5 - Publicação de imagens RGB
 ---------------------------------------
@@ -241,9 +249,9 @@ Exercício 6 - Câmaras RGBD
 Existe uma segunda categoria de câmaras que tem vindo a ser muito utilizada.
 São as chamadas câmaras **RGBD**. São sistemas que contêm vários sensores, um dedicado a medir o espectro visível (uma câmara RGB clássica, a parte **RGB**), outro focado na medição de distâncias (a parte **D**).
 
-Uma vez que ambos os sensores estão apontados na mesma direção, é depois possível comfirmar informação de distância com informação de cor obtendo assim uma nuvem de pontos colorida, i.e., uma lista de pontos com cor, cada ponto um tuplo (x,y,z,r,g,b).
+Uma vez que ambos os sensores estão apontados na mesma direção, é depois possível confirmar informação de distância com informação de cor obtendo assim uma nuvem de pontos colorida, i.e., uma lista de pontos com cor, cada ponto um tuplo (x,y,z,r,g,b).
 
-As câmaras RGBD produzem várias mensagens simultâneamente:
+As câmaras RGBD produzem várias mensagens simultaneamente:
 
     . As imagens da câmara RGB são mensagens do tipo sensor_msgs/Image;
     . As imagens da câmara de profundidade são mensagens do tipo sensor_msgs/Image;

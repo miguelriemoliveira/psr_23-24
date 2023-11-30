@@ -23,7 +23,7 @@ def main():
     rate = rospy.Rate(10)
     theta = 0
     radius = rospy.get_param("~radius", 2)
-    velocity = rospy.get_param("~velocity", 0.1)
+    angular_speed = rospy.get_param("~angular_speed", 0.1)
     while not rospy.is_shutdown():
 
         x = radius * math.cos(theta)
@@ -37,7 +37,7 @@ def main():
         print('Published the transformations')
         rate.sleep()
 
-        theta += velocity
+        theta += angular_speed
 
 
 if __name__ == '__main__':

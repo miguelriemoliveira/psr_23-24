@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<robot name="scara">
+
+    <!-- Define materials -->
+    <material name="yellow">
+        <color rgba="1 1 0 0.3" />
+    </material>
+
+    <material name="blue">
+        <color rgba="0 0 1 0.3" />
+    </material>
+
+    <material name="red">
+        <color rgba="1 0 0 0.3" />
+    </material>
+
+    <material name="green">
+        <color rgba="0 1 0 0.3" />
+    </material>
+
+    <!-- Define base_link -->
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <cylinder length="0.3" radius="0.2" />
+            </geometry>
+            <material name="yellow" />
+        </visual>
+    </link>
+
+    <!-- Define joint from base link to link 1 -->
+    <joint name="base_link_to_link_1" type="revolute">
+        <parent link="base_link" />
+        <child link="link_1" />
+        <origin xyz="0 0 0.3" rpy="0 0 0" />
+        <axis xyz="0 0 1" />
+        <limit effort="1000.0" lower="-3.14" upper="3.14" velocity="0.5" />
+    </joint>
+
+    <!-- Define  link_1 -->
+    <link name="link_1">
+        <visual>
+            <geometry>
+                <box size="1.5 0.4 0.3" />
+            </geometry>
+            <origin xyz="0.75 0 0" rpy="0 0 0" />
+            <material name="blue" />
+        </visual>
+    </link>
+
+    <!-- Define joint from link_1to link 1  auxliliary-->
+    <joint name="link_1_to_link_1_auxiliary" type="fixed">
+        <parent link="link_1" />
+        <child link="link_1_auxiliary" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint>
+
+    <!-- Define  link_1_auxiliary -->
+    <link name="link_1_auxiliary">
+        <visual>
+            <geometry>
+                <cylinder length="0.3" radius="0.2" />
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <material name="blue" />
+        </visual>
+    </link>
+
+    <!-- Define joint from link_1 to link_2 -->
+    <joint name="link_1_to_link_2" type="revolute">
+        <parent link="link_1" />
+        <child link="link_2" />
+        <origin xyz="1.5 0 0" rpy="0 0 0" />
+        <axis xyz="0 0 1" />
+        <limit effort="1000.0" lower="-1.57" upper="1.57" velocity="0.5" />
+    </joint>
+
+    <!-- Define  link_2 -->
+    <link name="link_2">
+        <visual>
+            <geometry>
+                <box size="1.2 0.4 0.3" />
+            </geometry>
+            <origin xyz="0.6 0 0" rpy="0 0 0" />
+            <material name="red" />
+        </visual>
+    </link>
+
+    <!-- Define joint from link_2 to link_2_auxiliary -->
+    <joint name="link_2_to_link_2_auxiliary" type="fixed">
+        <parent link="link_2" />
+        <child link="link_2_auxiliary" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint>
+
+    <!-- Define  link_2_auxiliary -->
+    <link name="link_2_auxiliary">
+        <visual>
+            <geometry>
+                <cylinder length="0.3" radius="0.2" />
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <material name="red" />
+        </visual>
+    </link>
+
+    <!-- Define joint from link_2 to ee_link -->
+    <joint name="link_2_to_ee_link" type="prismatic">
+        <parent link="link_2" />
+        <child link="ee_link" />
+        <origin xyz="1.2 0 0" rpy="0 1.57 0" />
+        <axis xyz="1 0 0" />
+        <limit effort="1000.0" lower="0.35" upper="0.6" velocity="0.5" />
+    </joint>
+
+    <!-- Define  ee_link -->
+    <link name="ee_link">
+        <visual>
+            <geometry>
+                <cylinder length="0.8" radius="0.05" />
+            </geometry>
+            <origin xyz="-0.4 0 0" rpy="0 -1.57 0" />
+            <material name="green" />
+        </visual>
+    </link>
+
+
+</robot>

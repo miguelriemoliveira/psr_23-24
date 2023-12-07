@@ -631,4 +631,6 @@ Exercício 9 - Corrida com comando manual
 
 A ideia é realizar uma corrida com o robô em modo de teleoperação. O ponto de partida é a cozinha, sendo que o robô deve ir pela sala, dar a volta ao corredor e regressar à cozinha.
 
-**Resultados da competição [no ficheiro COMPETITION.md](https://github.com/miguelriemoliveira/psr_23-24/blob/main/Parte12/COMPETITION.md)**
+**Resultados da competição em:**
+
+https://github.com/miguelriemoliveira/psr_23-24/blob/main/Parte12/COMPETITION.md

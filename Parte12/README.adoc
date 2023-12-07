@@ -421,7 +421,7 @@ Para alterar a cor de elementos deve ver http://gazebosim.org/tutorials?tut=ros_
 
 Numa primeira fase, os ficheiros a copiar são:
 
-- common_properties.xacro 
+- common_properties.xacro
 - turtlebot3_waffle_pi.gazebo.xacro
 - turtlebot3_waffle_pi.urdf.xacro
 
@@ -630,3 +630,5 @@ Exercício 9 - Corrida com comando manual
 ----------------------------------------
 
 A ideia é realizar uma corrida com o robô em modo de teleoperação. O ponto de partida é a cozinha, sendo que o robô deve ir pela sala, dar a volta ao corredor e regressar à cozinha.
+
+**Resultados da competição [AQUI](COMPETITION.md)**

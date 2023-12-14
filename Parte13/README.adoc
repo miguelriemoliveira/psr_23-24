@@ -24,9 +24,9 @@ em relação a uma posição inicial (em ROS representada por um sistema de coor
 Uma vez que a hodometria apenas faz a localização em relação a uma posição inicial, é chamado um sistema de localização relativo (a essa posição inicial).
 Por oposição, um sistema GPS é um sistema de localização absoluto.
 
-Um paralelismo interessante é a forma como um pirata segue as instruções num mapa do tesouro, por exemplo: Partindo da àrvore grande (posição inicial) e virado para sul (orientação inicial),
+Um paralelismo interessante é a forma como um pirata segue as instruções num mapa do tesouro, por exemplo: Partindo da árvore grande (posição inicial) e virado para sul (orientação inicial),
 dá 30 passos (deslocamento relativo). Depois, vira para a esquerda (rotação relativa). Caminha mais 15 passos.
-Estas instruções são na sua mairia relativas, i.e., só são consistentes se se tiver em conta a posição em relação à qual se referem.
+Estas instruções são na sua maioria relativas, i.e., só são consistentes se se tiver em conta a posição em relação à qual se referem.
 
 A hodometria funciona de modo similar. Sabendo o raio das rodas de um robô, e sabendo a velocidade de rotação
 das mesmas é possível saber qual foi o deslocamento por volta da roda (equivalente ao perímetro). A duas dimensões é necessário utilizar modelos cinemáticos mais complexos que são dependentes
@@ -37,7 +37,7 @@ da configuração do robô. Neste caso estamos a utilizar um robô diferencial, 
 Aqui um https://www.youtube.com/watch?v=aE7RQNhwnPQ[tutorial interessante] sobre modelos diferenciais para robôs.
 ================
 
-Exercício 1 - Visualização da odometria do robô
+Exercício 1 - Visualização da hodometria do robô
 -----------------------------------------------
 
 Lance o seu robô (último exercício da Parte12) e visualize a árvore de transformações.

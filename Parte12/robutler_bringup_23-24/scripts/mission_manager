@@ -120,7 +120,7 @@ def moveTo(feedback, x, y, z, R, P, Y, location, goal_publisher):
     # TODO know when move is finished
 
     try:
-        result_msg = rospy.wait_for_message('/mover_base/result', MoveBaseActionResult, timeout=60)
+        result_msg = rospy.wait_for_message('/move_base/result', MoveBaseActionResult, timeout=60)
     except:
         print('Timeout waiting for moveto')
         # TODO

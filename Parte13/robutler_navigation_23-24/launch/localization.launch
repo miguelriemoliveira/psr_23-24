@@ -7,7 +7,8 @@
     <arg name="initial_pose_a" default="0.0"/>
 
     <!-- Map server -->
-    <arg name="map_file" default="$(find robutler_navigation_23-24)/maps/turtlebot_house_map/my_map.yaml"/>
+    <!-- <arg name="map_file" default="$(find robutler_navigation_23-24)/maps/turtlebot_house_map/my_map.yaml"/> -->
+    <arg name="map_file" default="$(find robutler_navigation_23-24)/maps/aws_map1/aws_map1.yaml"/>
     <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)">
     </node>
 

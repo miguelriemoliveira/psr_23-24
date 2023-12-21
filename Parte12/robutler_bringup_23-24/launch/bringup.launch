@@ -4,6 +4,7 @@
     <arg name="x_pos" default="-3.0"/>
     <arg name="y_pos" default="1.0"/>
     <arg name="z_pos" default="0.0"/>
+    <arg name="use_navigation" default="true"/>
 
     <param name="robot_description" command="$(find xacro)/xacro $(find robutler_description_23-24)/urdf/robutler.urdf.xacro" />
 
@@ -12,4 +13,14 @@
     <node pkg="rviz" type="rviz" name="rviz" output="screen" args="-d $(find robutler_bringup_23-24)/config/rviz.rviz"/>
 
     <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model robutler -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -param robot_description" />
+
+    <group if="$(arg use_navigation)">
+        <include file="$(find robutler_navigation_23-24)/launch/localization.launch">
+        </include>
+        <include file="$(find robutler_navigation_23-24)/launch/navigation.launch">
+        </include>
+    </group>
+
+
+
 </launch>

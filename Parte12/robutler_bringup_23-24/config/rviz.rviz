@@ -7,7 +7,6 @@ Panels:
         - /Global Options1
         - /Status1
         - /TF1/Frames1
-        - /Map1/Status1
       Splitter Ratio: 0.5852941274642944
     Tree Height: 367
   - Class: rviz/Selection
@@ -338,6 +337,15 @@ Visualization Manager:
       Topic: /move_base/DWAPlannerROS/local_plan
       Unreliable: false
       Value: true
+    - Class: rviz/InteractiveMarkers
+      Enable Transparency: true
+      Enabled: true
+      Name: MissionManager-InteractiveMarkers
+      Show Axes: false
+      Show Descriptions: true
+      Show Visual Aids: false
+      Update Topic: /mission/update
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 255; 255; 255
@@ -366,7 +374,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 9.917830467224121
+      Distance: 10.588590621948242
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -374,17 +382,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: -3.1783268451690674
-        Y: 2.8194775581359863
-        Z: -0.820125162601471
+        X: 1.048857569694519
+        Y: 2.0130932331085205
+        Z: -1.2804745435714722
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.8397973775863647
+      Pitch: 1.0147974491119385
       Target Frame: <Fixed Frame>
-      Yaw: 5.191357612609863
+      Yaw: 4.616357803344727
     Saved: ~
 Window Geometry:
   Displays:
